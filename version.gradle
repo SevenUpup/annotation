@@ -1,0 +1,58 @@
+ext {
+    sdkVersion = [
+            "compile"   : 33,
+            "buildTools": '33.0.0',
+            "min"       : 21,
+            "target"    : 33
+    ]
+    frame = [
+            /**
+             * true:引用源码
+             * false:引用maven仓库
+             */
+            "importSourceCode": true,
+            /**
+             * 是否是快照版本
+             */
+            "snapshot"        : false,
+            "fido_annotation" : '0.0.1'
+    ]
+    anVersion = anVersion()
+    dependenciesVersion = [
+            'kotlin'            : '1.8.21',
+            'support'           : '30.0.0',
+            'appcompat'         : '1.4.1',
+            'startup_runtime'   : '1.1.1',
+            'coordinatorlayout' : '1.2.0',
+            'constraintlayout'  : '2.1.3',
+            'annotation'        : '1.3.0',
+            'material'          : '1.5.0',
+            'core_ktx'          : '1.8.0',
+            'okhttp3'           : '4.10.0',
+            'retrofit2'         : '2.9.0',
+            'rxjava'            : '3.1.5',
+            'rxandroid'         : '3.0.2',
+            'gson'              : '2.10',
+            'glide'             : '4.14.2',
+            'immersionbar'      : '3.2.2',
+            'SmartRefreshLayout': '2.0.5',
+            'auto_service'      : '1.0.1',
+            'kotlinpoet'        : '1.12.0',
+            'rxpermissions'     : '0.12',
+            'recycleview'       : '1.2.1',
+            'UIViewPager'       : '0.1.8',
+            'okhttpprofiler'    : '1.0.8',
+            'coroutines'        : '1.6.4',
+            'serialization'     : '1.4.1',
+            'lifecycle'         : '2.6.1',
+            "ksp"               : '1.8.21-1.0.11'
+    ]
+}
+
+def anVersion() {
+    def mVersion = rootProject.frame["fido_annotation"]
+    if (rootProject.frame["snapshot"]) {
+        mVersion = "$mVersion-SNAPSHOT"
+    }
+    return mVersion
+}

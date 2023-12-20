@@ -1,0 +1,22 @@
+plugins {
+    id 'java-library'
+    id 'kotlin'
+    id 'org.jetbrains.kotlin.jvm'
+}
+apply from: '../publish_arr_jar.gradle'
+
+//java {
+//    sourceCompatibility = JavaVersion.VERSION_11
+//    targetCompatibility = JavaVersion.VERSION_11
+//}
+
+def dependenciesVersion = rootProject.dependenciesVersion
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "com.google.devtools.ksp:symbol-processing-api:${dependenciesVersion["ksp"]}"
+    implementation "com.squareup:kotlinpoet:${dependenciesVersion["kotlinpoet"]}"
+    implementation "com.squareup:kotlinpoet-ksp:${dependenciesVersion["kotlinpoet"]}"
+//    compileOnly "org.jetbrains.kotlin:kotlin-stdlib-jdk8:${dependenciesVersion["kotlin"]}"
+//    implementation("com.squareup.okhttp3:logging-interceptor:${dependenciesVersion["okhttp3"]}")
+    api(project(":annotation"))
+}
