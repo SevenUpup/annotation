@@ -5,10 +5,10 @@ plugins {
 }
 apply from: '../publish_arr_jar.gradle'
 
-//java {
-//    sourceCompatibility = JavaVersion.VERSION_11
-//    targetCompatibility = JavaVersion.VERSION_11
-//}
+java {
+    sourceCompatibility = JavaVersion.VERSION_11
+    targetCompatibility = JavaVersion.VERSION_11
+}
 
 def dependenciesVersion = rootProject.dependenciesVersion
 dependencies {
