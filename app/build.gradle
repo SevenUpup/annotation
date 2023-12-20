@@ -5,14 +5,14 @@ plugins {
 
 android {
     namespace 'com.fido.common.fido_annotation'
-    compileSdk 33
+    compileSdk sdkVersion.compile
 
     defaultConfig {
         applicationId "com.fido.common.fido_annotation"
-        minSdk 24
-        targetSdk 33
-        versionCode 1
-        versionName "1.0"
+        minSdk sdkVersion.min
+        targetSdk sdkVersion.target
+        versionCode frame.version_code
+        versionName frame.fido_annotation
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }

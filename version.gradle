@@ -2,7 +2,7 @@ ext {
     sdkVersion = [
             "compile"   : 33,
             "buildTools": '33.0.0',
-            "min"       : 21,
+            "min"       : 24,
             "target"    : 33
     ]
     frame = [
@@ -15,7 +15,8 @@ ext {
              * 是否是快照版本
              */
             "snapshot"        : false,
-            "fido_annotation" : '0.0.1'
+            "fido_annotation" : '0.0.1',
+            "version_code"    : 1,
     ]
     anVersion = anVersion()
     dependenciesVersion = [
