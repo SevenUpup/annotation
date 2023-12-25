@@ -9,6 +9,7 @@ import com.google.devtools.ksp.symbol.KSPropertyDeclaration
 import com.google.devtools.ksp.validate
 import com.squareup.kotlinpoet.FileSpec
 import com.squareup.kotlinpoet.FunSpec
+import com.squareup.kotlinpoet.ksp.KotlinPoetKspPreview
 import com.squareup.kotlinpoet.ksp.toClassName
 import com.squareup.kotlinpoet.ksp.writeTo
 
@@ -21,6 +22,7 @@ class BindViewGenerator(
     codeGenerator: CodeGenerator,
     logger: KSPLogger
 ) : BaseGenerator(codeGenerator, logger) {
+    @OptIn(KotlinPoetKspPreview::class)
     override fun process(resolver: Resolver) {
         val symbols = resolver.getSymbolsWithAnnotation(BindView::class.qualifiedName!!)
         val bindList = symbols.filter {

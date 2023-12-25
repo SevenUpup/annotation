@@ -6,8 +6,8 @@ plugins {
 apply from: '../publish_arr_jar.gradle'
 
 java {
-    sourceCompatibility = JavaVersion.VERSION_11
-    targetCompatibility = JavaVersion.VERSION_11
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
 }
 
 def dependenciesVersion = rootProject.dependenciesVersion
@@ -20,3 +20,7 @@ dependencies {
 //    implementation("com.squareup.okhttp3:logging-interceptor:${dependenciesVersion["okhttp3"]}")
     api(project(":annotation"))
 }
+
+//sourceSets.main {
+//    java.srcDirs("src/main/java")
+//}
