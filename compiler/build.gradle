@@ -20,7 +20,3 @@ dependencies {
 //    implementation("com.squareup.okhttp3:logging-interceptor:${dependenciesVersion["okhttp3"]}")
     api(project(":annotation"))
 }
-
-//sourceSets.main {
-//    java.srcDirs("src/main/java")
-//}

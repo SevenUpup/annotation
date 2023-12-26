@@ -1,5 +1,6 @@
 package com.fido.common.fido_annotation
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -15,9 +16,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        BindViewUtils.bind(this)
+        bindView()
         mBt.setOnClickListener {
             Toast.makeText(this,"clike me by BindView",Toast.LENGTH_SHORT).show()
+            startActivity(Intent(this,JavaActivity::class.java))
         }
     }
 }
