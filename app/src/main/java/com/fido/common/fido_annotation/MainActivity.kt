@@ -15,8 +15,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-        bindView()
+//        BindViewUtils.bind(this)
+//        bindView()
         mBt.setOnClickListener {
             Toast.makeText(this,"clike me by BindView",Toast.LENGTH_SHORT).show()
             startActivity(Intent(this,JavaActivity::class.java))

@@ -38,6 +38,12 @@ android {
         jvmTarget = '1.8'
     }
 
+    kotlin {
+        sourceSets {
+            main.kotlin.srcDirs += 'build/generated/ksp'
+        }
+    }
+
 }
 
 dependencies {
@@ -60,11 +66,14 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 
+    //常用工具类
+    implementation 'com.github.SevenUpup.common_utils:base_util:0.3.0'
+
     if (rootProject.frame['importSourceCode']){
         implementation project(':annotation')
         ksp project(':compiler')
     }else{
-        implementation 'com.github.SevenUpup.annotation:annotation:0.0.11'
-        ksp 'com.github.SevenUpup.annotation:compiler:0.0.11'
+        implementation 'com.github.SevenUpup.annotation:annotation:0.0.13'
+        ksp 'com.github.SevenUpup.annotation:compiler:0.0.13'
     }
 }

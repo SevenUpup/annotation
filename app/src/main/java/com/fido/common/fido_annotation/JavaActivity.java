@@ -24,7 +24,8 @@ public class JavaActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_java);
 
-        JavaActivityViewBindKt.bindView(this);
+//        BindViewUtils.INSTANCE.bind(this);
+//        JavaActivityViewBindKt.bindView(this);
         mBt.setOnClickListener(v -> Toast.makeText(JavaActivity.this,"java ksp success",Toast.LENGTH_SHORT).show());
     }
 }

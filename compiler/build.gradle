@@ -19,4 +19,5 @@ dependencies {
 //    compileOnly "org.jetbrains.kotlin:kotlin-stdlib-jdk8:${dependenciesVersion["kotlin"]}"
 //    implementation("com.squareup.okhttp3:logging-interceptor:${dependenciesVersion["okhttp3"]}")
     api(project(":annotation"))
+
 }
